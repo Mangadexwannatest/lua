@@ -1,7 +1,7 @@
 
 local royxui = {}
 
-do  local ui =  game:GetService("CoreGui").RobloxGui.Modules:FindFirstChild("Royx")  if ui then ui:Destroy() end end
+do  local ui =  game:GetService("CoreGui").RobloxGui.Modules:FindFirstChild("CrazyDay")  if ui then ui:Destroy() end end
 
 repeat wait() until game:IsLoaded()
 
@@ -14,12 +14,12 @@ local tween = game:GetService("TweenService")
 
 local Royx = Instance.new("ScreenGui")
 
-Royx.Name = "Royx"
+Royx.Name = "CrazyDay"
 Royx.Parent = game:GetService("CoreGui").RobloxGui.Modules
 Royx.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 if syn then
-	syn.protect_gui(game:GetService("CoreGui").RobloxGui.Modules:FindFirstChild("Royx"))
+	syn.protect_gui(game:GetService("CoreGui").RobloxGui.Modules:FindFirstChild("CrazyDay"))
 end
 
 local function MakeDraggable(topbarobject, object)
@@ -360,7 +360,7 @@ function royxui:royxstart(text,logo)
 		imagenoti.Position = UDim2.new(0.135999978, 0, 0.5, 0)
 		imagenoti.Size = UDim2.new(0, 50, 0, 50)
 		imagenoti.BackgroundTransparency = 1
-		imagenoti.Image = "http://www.roblox.com/asset/?id=17013181653"
+		imagenoti.Image = "http://www.roblox.com/asset/?id="..tostring(logo)
 
 		local txdlid = Instance.new("TextLabel")
 		local LableFrame = Instance.new("Frame")
@@ -578,12 +578,12 @@ function royxui:royxstart(text,logo)
 	LogoTop.BackgroundTransparency = 1.000
 	LogoTop.Position = UDim2.new(-0.101428136, 0, -0.754071355, 0)
 	LogoTop.Size = UDim2.new(0, 50, 0, 50)
-	LogoTop.Image = "http://www.roblox.com/asset/?id=17013181653"
+	LogoTop.Image = "http://www.roblox.com/asset/?id="..tostring(logo)
 	LogoTop.ScaleType = Enum.ScaleType.Crop
 
 	local UIGradient = Instance.new("UIGradient")
 
-	UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(85, 170, 255)), ColorSequenceKeypoint.new(0.26, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(60, 160, 200)), ColorSequenceKeypoint.new(0.26, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
 	UIGradient.Parent = NameReal
 
 	local Line1 = Instance.new("Frame")
@@ -689,7 +689,7 @@ function royxui:royxstart(text,logo)
 	MakeDraggable(ScrollingFrame_Menubar,MainSceen)
 
 	local royxtabui = {}
-
+    
 	function royxtabui:royxtab(text,logo)
 		if logo == nil then
 			logo = 16966662126
@@ -749,7 +749,7 @@ function royxui:royxstart(text,logo)
 		LogoBar.BackgroundTransparency = 1.000
 		LogoBar.Position = UDim2.new(-0.0854563117, 0, 2.21267605, 0)
 		LogoBar.Size = UDim2.new(0, 85, 0, 85)
-		LogoBar.Image = "http://www.roblox.com/asset/?id=17013181653"
+		LogoBar.Image = "http://www.roblox.com/asset/?id="..tostring(logo)
 		LogoBar.ScaleType = Enum.ScaleType.Crop
 
 		local MainPage = Instance.new("Frame")
@@ -1066,7 +1066,7 @@ function royxui:royxstart(text,logo)
 				ToggleMainStroke.Parent = ToggleMain
 				ToggleMainStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 				ToggleMainStroke.LineJoinMode = Enum.LineJoinMode.Round
-				ToggleMainStroke.Color = Color3.fromRGB(85, 170, 255)
+				ToggleMainStroke.Color = Color3.fromRGB(60, 160, 200)
 				ToggleMainStroke.Transparency = 0.6
 
 				ToggleMainUICorner.CornerRadius = UDim.new(0, 6)
@@ -1081,7 +1081,7 @@ function royxui:royxstart(text,logo)
 				LogoToggle.BackgroundTransparency = 1.000
 				LogoToggle.Position = UDim2.new(0.0500000007, 0, 0.5, 0)
 				LogoToggle.Size = UDim2.new(0, 50, 0, 50)
-				LogoToggle.Image = "http://www.roblox.com/asset/?id=17013181653"
+				LogoToggle.Image = "http://www.roblox.com/asset/?id="..tostring(logo)
 
 				TextToggle.Name = "TextToggle"
 				TextToggle.Parent = LogoToggle
@@ -1258,7 +1258,7 @@ function royxui:royxstart(text,logo)
 				LockerImageLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
 				LockerImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
 				LockerImageLabel.Size = UDim2.new(0, 0, 0, 0)
-				LockerImageLabel.Image = "http://www.roblox.com/asset/?id=17013181653"
+				LockerImageLabel.Image = "http://www.roblox.com/asset/?id=3926305904"
 				LockerImageLabel.ImageRectOffset = Vector2.new(404, 364)
 				LockerImageLabel.ImageRectSize = Vector2.new(36, 36)
 				LockerImageLabel.ImageColor3 = Color3.fromRGB(255,25,25)
@@ -1312,7 +1312,7 @@ function royxui:royxstart(text,logo)
 				LineMain.Position = UDim2.new(0.5, 0, 0.5, 0)
 				LineMain.Size = UDim2.new(0, 397, 0, 2)
 
-				LineUIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(15, 15, 15)), ColorSequenceKeypoint.new(0.16, Color3.fromRGB(36, 62, 89)), ColorSequenceKeypoint.new(0.51, Color3.fromRGB(85, 170, 255)), ColorSequenceKeypoint.new(0.85, Color3.fromRGB(36, 63, 90)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(15, 15, 15))}
+				LineUIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(15, 15, 15)), ColorSequenceKeypoint.new(0.16, Color3.fromRGB(36, 62, 89)), ColorSequenceKeypoint.new(0.51, Color3.fromRGB(60, 160, 200)), ColorSequenceKeypoint.new(0.85, Color3.fromRGB(36, 63, 90)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(15, 15, 15))}
 				LineUIGradient.Name = "LineUIGradient"
 				LineUIGradient.Parent = LineMain
 			end
@@ -1400,7 +1400,7 @@ function royxui:royxstart(text,logo)
 				FrameBoxStroke.Parent = FrameBox
 				FrameBoxStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 				FrameBoxStroke.LineJoinMode = Enum.LineJoinMode.Round
-				FrameBoxStroke.Color = Color3.fromRGB(85, 170, 255)
+				FrameBoxStroke.Color = Color3.fromRGB(60, 160, 200)
 				FrameBoxStroke.Transparency = 0.6
 
 				local ConerTextBox2 = Instance.new("UICorner")
@@ -1505,7 +1505,7 @@ function royxui:royxstart(text,logo)
 				FrameBoxStroke.Parent = DropFrame
 				FrameBoxStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 				FrameBoxStroke.LineJoinMode = Enum.LineJoinMode.Round
-				FrameBoxStroke.Color = Color3.fromRGB(85, 170, 255)
+				FrameBoxStroke.Color = Color3.fromRGB(60, 160, 200)
 				FrameBoxStroke.Transparency = 0.6
 
 				local ConnerDropFrame = Instance.new("UICorner")
@@ -1823,7 +1823,7 @@ function royxui:royxstart(text,logo)
 				Main_UiStroke2.Parent = SliderFrame
 				Main_UiStroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 				Main_UiStroke2.LineJoinMode = Enum.LineJoinMode.Round
-				Main_UiStroke2.Color = Color3.fromRGB(85, 170, 255)
+				Main_UiStroke2.Color = Color3.fromRGB(60, 160, 200)
 				Main_UiStroke2.Transparency = 0.6
 
 				local SliderFrame_UICorner = Instance.new("UICorner")
@@ -1865,7 +1865,7 @@ function royxui:royxstart(text,logo)
 				Main_UiStroke3.Parent = ShowValueFrame
 				Main_UiStroke3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 				Main_UiStroke3.LineJoinMode = Enum.LineJoinMode.Round
-				Main_UiStroke3.Color = Color3.fromRGB(85, 170, 255)
+				Main_UiStroke3.Color = Color3.fromRGB(60, 160, 200)
 				Main_UiStroke3.Transparency = 0.6
 
 				SliderFrame.MouseEnter:Connect(function()
@@ -1918,7 +1918,7 @@ function royxui:royxstart(text,logo)
 				Addvalue.BorderSizePixel = 0
 				Addvalue.Position = UDim2.new(0.75, 0, 0.15, 0)
 				Addvalue.Size = UDim2.new(0, 15, 0, 15)
-				Addvalue.Image = "http://www.roblox.com/asset/?id=17013181653"
+				Addvalue.Image = "http://www.roblox.com/asset/?id=6035067836"
 				Addvalue.ImageColor3 =  Color3.fromRGB(85, 170, 255)
 
 				local Deletevalue = Instance.new("ImageButton")
@@ -1929,7 +1929,7 @@ function royxui:royxstart(text,logo)
 				Deletevalue.BorderSizePixel = 0
 				Deletevalue.Position = UDim2.new(0.70, 0, 0.15, 0)
 				Deletevalue.Size = UDim2.new(0, 15, 0, 15)
-				Deletevalue.Image = "http://www.roblox.com/asset/?id=17013181653"
+				Deletevalue.Image = "http://www.roblox.com/asset/?id=6035047377"
 				Deletevalue.ImageColor3 =  Color3.fromRGB(85, 170, 255)
 
 				local CustomValue = Instance.new("TextBox")
@@ -2243,7 +2243,7 @@ function royxui:royxstart(text,logo)
 				DropFrameStroke.Name = ""
 				DropFrameStroke.Parent = DropFrame
 				DropFrameStroke.LineJoinMode = Enum.LineJoinMode.Round
-				DropFrameStroke.Color = Color3.fromRGB(85, 170, 255)
+				DropFrameStroke.Color = Color3.fromRGB(60, 160, 200)
 				DropFrameStroke.Transparency = 0.6
 
 				local LabelFrameDrop = Instance.new("TextLabel")
@@ -2286,7 +2286,7 @@ function royxui:royxstart(text,logo)
 				DropArbt_listimage.Position = UDim2.new(1.1, 0, 0.5, 0)
 				DropArbt_listimage.BorderSizePixel = 0
 				DropArbt_listimage.Size = UDim2.new(0, 25, 0, 25)
-				DropArbt_listimage.Image = "http://www.roblox.com/asset/?id=17013181653"
+				DropArbt_listimage.Image = "http://www.roblox.com/asset/?id=6031091004"
 				DropArbt_listimage.ImageColor3 = Color3.fromRGB(155, 155, 155)
 
 				local ScolDown = Instance.new("ScrollingFrame")
@@ -2581,7 +2581,7 @@ function royxui:royxstart(text,logo)
 	return royxtabui
 end
 
-local Main = royxui:royxstart("Royx Hub",16966662126)
+local Main = royxui:royxstart("Second Piece",16966662126)
 
 local Tab = Main:royxtab("Tab 1")
 
@@ -2664,3 +2664,34 @@ end)
 Page:Button("check value Multi DropDown",function()
     print(test.a)
 end)
+
+
+coroutine.resume(coroutine.create(function()
+    pcall(function ()
+local OpenClose = Instance.new("ScreenGui")
+local TextButton = Instance.new("TextButton")
+OpenClose.Name = "Open/Close"
+OpenClose.Parent = game:WaitForChild("CoreGui")
+OpenClose.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextButton.Parent = OpenClose
+TextButton.BackgroundColor3 = Color3.fromRGB(179, 179, 0)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.0164901856, 0, 0.580553472, 0)
+TextButton.Size = UDim2.new(0.118393041, 0, 0.0455882363, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Open/Close"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 15.000
+end)
+end))
+
+local Button = game.CoreGui:WaitForChild("Open/Close"):WaitForChild("TextButton")
+coroutine.resume(coroutine.create(function()
+    pcall(function ()
+        Button.TouchTap:Connect(function()
+            game:GetService("VirtualInputManager"):SendKeyEvent(true, getgenv().Settings.Key, false, nil)
+        end)
+    end)
+end))

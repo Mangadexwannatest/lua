@@ -1,6 +1,7 @@
+
 local royxui = {}
 
-do  local ui =  game:GetService("CoreGui").RobloxGui.Modules:FindFirstChild("Royx")  if ui then ui:Destroy() end end
+do  local ui =  game:GetService("CoreGui").RobloxGui.Modules:FindFirstChild("CrazyDay")  if ui then ui:Destroy() end end
 
 repeat wait() until game:IsLoaded()
 
@@ -13,12 +14,12 @@ local tween = game:GetService("TweenService")
 
 local Royx = Instance.new("ScreenGui")
 
-Royx.Name = "Royx"
+Royx.Name = "CrazyDay"
 Royx.Parent = game:GetService("CoreGui").RobloxGui.Modules
 Royx.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 if syn then
-	syn.protect_gui(game:GetService("CoreGui").RobloxGui.Modules:FindFirstChild("Royx"))
+	syn.protect_gui(game:GetService("CoreGui").RobloxGui.Modules:FindFirstChild("CrazyDay"))
 end
 
 local function MakeDraggable(topbarobject, object)
@@ -253,7 +254,7 @@ function royxui:royxstart(text,logo)
 	focusui = false
 
 	if logo == nil then
-		logo = 8543527952
+		logo = 16966662126
 	end
 
 	local MainSceen = Instance.new("Frame")
@@ -320,7 +321,7 @@ function royxui:royxstart(text,logo)
 
 	function royxui:Notification(text,text2,delays,logo)
 		if logo == nil then
-			logo = "8543527952"
+			logo = "16966662126"
 		end
 		if delays == nil then
 			delays = 1
@@ -582,7 +583,7 @@ function royxui:royxstart(text,logo)
 
 	local UIGradient = Instance.new("UIGradient")
 
-	UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(85, 170, 255)), ColorSequenceKeypoint.new(0.26, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(60, 160, 200)), ColorSequenceKeypoint.new(0.26, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
 	UIGradient.Parent = NameReal
 
 	local Line1 = Instance.new("Frame")
@@ -688,10 +689,10 @@ function royxui:royxstart(text,logo)
 	MakeDraggable(ScrollingFrame_Menubar,MainSceen)
 
 	local royxtabui = {}
-
+    
 	function royxtabui:royxtab(text,logo)
 		if logo == nil then
-			logo = 8543527952
+			logo = 16966662126
 		end
 		PageOrders = PageOrders + 1
 
@@ -1026,7 +1027,7 @@ function royxui:royxstart(text,logo)
 
 			function royxfunction:Toggle(text,logo,config,callback)
 				if logo == nil then
-					logo = 8543527952
+					logo = 16966662126
 				end
 				local ToggleFrame = Instance.new("Frame")
 				local ToggleMain = Instance.new("TextButton")
@@ -1065,7 +1066,7 @@ function royxui:royxstart(text,logo)
 				ToggleMainStroke.Parent = ToggleMain
 				ToggleMainStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 				ToggleMainStroke.LineJoinMode = Enum.LineJoinMode.Round
-				ToggleMainStroke.Color = Color3.fromRGB(85, 170, 255)
+				ToggleMainStroke.Color = Color3.fromRGB(60, 160, 200)
 				ToggleMainStroke.Transparency = 0.6
 
 				ToggleMainUICorner.CornerRadius = UDim.new(0, 6)
@@ -1311,7 +1312,7 @@ function royxui:royxstart(text,logo)
 				LineMain.Position = UDim2.new(0.5, 0, 0.5, 0)
 				LineMain.Size = UDim2.new(0, 397, 0, 2)
 
-				LineUIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(15, 15, 15)), ColorSequenceKeypoint.new(0.16, Color3.fromRGB(36, 62, 89)), ColorSequenceKeypoint.new(0.51, Color3.fromRGB(85, 170, 255)), ColorSequenceKeypoint.new(0.85, Color3.fromRGB(36, 63, 90)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(15, 15, 15))}
+				LineUIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(15, 15, 15)), ColorSequenceKeypoint.new(0.16, Color3.fromRGB(36, 62, 89)), ColorSequenceKeypoint.new(0.51, Color3.fromRGB(60, 160, 200)), ColorSequenceKeypoint.new(0.85, Color3.fromRGB(36, 63, 90)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(15, 15, 15))}
 				LineUIGradient.Name = "LineUIGradient"
 				LineUIGradient.Parent = LineMain
 			end
@@ -1399,7 +1400,7 @@ function royxui:royxstart(text,logo)
 				FrameBoxStroke.Parent = FrameBox
 				FrameBoxStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 				FrameBoxStroke.LineJoinMode = Enum.LineJoinMode.Round
-				FrameBoxStroke.Color = Color3.fromRGB(85, 170, 255)
+				FrameBoxStroke.Color = Color3.fromRGB(60, 160, 200)
 				FrameBoxStroke.Transparency = 0.6
 
 				local ConerTextBox2 = Instance.new("UICorner")
@@ -1504,7 +1505,7 @@ function royxui:royxstart(text,logo)
 				FrameBoxStroke.Parent = DropFrame
 				FrameBoxStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 				FrameBoxStroke.LineJoinMode = Enum.LineJoinMode.Round
-				FrameBoxStroke.Color = Color3.fromRGB(85, 170, 255)
+				FrameBoxStroke.Color = Color3.fromRGB(60, 160, 200)
 				FrameBoxStroke.Transparency = 0.6
 
 				local ConnerDropFrame = Instance.new("UICorner")
@@ -1822,7 +1823,7 @@ function royxui:royxstart(text,logo)
 				Main_UiStroke2.Parent = SliderFrame
 				Main_UiStroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 				Main_UiStroke2.LineJoinMode = Enum.LineJoinMode.Round
-				Main_UiStroke2.Color = Color3.fromRGB(85, 170, 255)
+				Main_UiStroke2.Color = Color3.fromRGB(60, 160, 200)
 				Main_UiStroke2.Transparency = 0.6
 
 				local SliderFrame_UICorner = Instance.new("UICorner")
@@ -1864,7 +1865,7 @@ function royxui:royxstart(text,logo)
 				Main_UiStroke3.Parent = ShowValueFrame
 				Main_UiStroke3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 				Main_UiStroke3.LineJoinMode = Enum.LineJoinMode.Round
-				Main_UiStroke3.Color = Color3.fromRGB(85, 170, 255)
+				Main_UiStroke3.Color = Color3.fromRGB(60, 160, 200)
 				Main_UiStroke3.Transparency = 0.6
 
 				SliderFrame.MouseEnter:Connect(function()
@@ -2242,7 +2243,7 @@ function royxui:royxstart(text,logo)
 				DropFrameStroke.Name = ""
 				DropFrameStroke.Parent = DropFrame
 				DropFrameStroke.LineJoinMode = Enum.LineJoinMode.Round
-				DropFrameStroke.Color = Color3.fromRGB(85, 170, 255)
+				DropFrameStroke.Color = Color3.fromRGB(60, 160, 200)
 				DropFrameStroke.Transparency = 0.6
 
 				local LabelFrameDrop = Instance.new("TextLabel")
@@ -2579,3 +2580,87 @@ function royxui:royxstart(text,logo)
 	end
 	return royxtabui
 end
+
+local Main = royxui:royxstart("Second Piece",16966662126)
+
+local Tab = Main:royxtab("Tab 1")
+
+local Tab2 = Main:royxtab("Tab 2")
+
+local Page = Tab:royxpage("Auto Farm")
+
+Page:Button("Button",function()
+
+end)
+
+Page:Button("Notification",function()
+	royxui:Notification("Notification","Royx",5)
+end)
+
+local Toggle = Page:Toggle("Toggle",16966662126,true,function()
+
+end)
+
+Page:Button("Lock",function()
+	Toggle:lock()
+end)
+
+Page:Button("Unlock",function()
+	Toggle:unlock()
+end)
+
+Page:Line()
+
+Page:Label("Label")
+
+Page:Textbox("TextBox","Write Here . . .",function(v)
+	_G.Textbox = v
+	print(_G.Textbox)
+end)
+
+local dropno = Page:Dropdown("DropDown",{"1","2","3"},"3",function (v)
+	_G.dropno = v
+end)
+
+Page:Button("Clear Dropdown",function()
+	dropno:Clear()
+end)
+
+Page:Button("Add Dropdown",function()
+	dropno:Add("Test")
+end)
+
+Page:Slider("Slider",true,0,100,10,10,function(v)
+	print(v)
+end)
+
+local test ={
+	a = false;
+	b = false;
+	c = false;
+}
+
+Page:MultiDropdown("Multi DropDown",true,{
+	location = test;
+	list = {
+		{
+			Name = "one";
+			flag = "a";
+		};
+		{
+			Name = "two";
+			flag = "b";
+		};
+		{
+			Name = "thee";
+			flag = "c";
+		};
+	};
+	default = "test";
+}, function(v)
+	_G.dropnox = v
+end)
+
+Page:Button("check value Multi DropDown",function()
+    print(test.a)
+end)

@@ -1,0 +1,55 @@
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+
+local Window = Fluent:CreateWindow({
+    Title = "Second Piece",
+    SubTitle = "Last Update : April/04/2024",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = false,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl
+})
+
+local Tabs = {Main = Window:AddTab({ Title = "Main", Icon = "" }),Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })}
+local Options = Fluent.Options
+
+do
+
+    
+    local MultiDropdown = Tabs.Main:AddDropdown("Select Portal", {
+        Title = "Tier",
+        Description = nil,
+        Values = {"Common", "UnCommon", "Legendary"},
+        Multi = true,
+        Default = nil,
+    })
+
+    MultiDropdown:SetValue({
+        Common = false,
+        UnCommon = false,
+        Legendary = false
+    })
+
+    MultiDropdown:OnChanged(function(Value)
+        local Values = {}
+        for Value, State in next, Value do
+            table.insert(Values, Value)
+        end
+        print("Mutlidropdown changed:", table.concat(Values, ", "))
+    end)
+
+end -- End Of Do
+
+Keybind:SetValue("MB2", "Toggle")
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+SaveManager:IgnoreThemeSettings()
+SaveManager:SetIgnoreIndexes({})
+InterfaceManager:SetFolder("Second_Piece_Config")
+SaveManager:SetFolder("Second_Piece_Config/_"..game.Players.LocalPlayer.Name)
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
+Window:SelectTab(1)
+SaveManager:LoadAutoloadConfig()

@@ -254,7 +254,7 @@ function royxui:royxstart(text,logo)
 	focusui = false
 
 	if logo == nil then
-		logo = 8543527952
+		logo = 16966662126
 	end
 
 	local MainSceen = Instance.new("Frame")
@@ -321,7 +321,7 @@ function royxui:royxstart(text,logo)
 
 	function royxui:Notification(text,text2,delays,logo)
 		if logo == nil then
-			logo = "8543527952"
+			logo = "16966662126"
 		end
 		if delays == nil then
 			delays = 1
@@ -360,7 +360,7 @@ function royxui:royxstart(text,logo)
 		imagenoti.Position = UDim2.new(0.135999978, 0, 0.5, 0)
 		imagenoti.Size = UDim2.new(0, 50, 0, 50)
 		imagenoti.BackgroundTransparency = 1
-		imagenoti.Image = "http://www.roblox.com/asset/?id="..tostring(logo)
+		imagenoti.Image = "http://www.roblox.com/asset/?id=17013181653"
 
 		local txdlid = Instance.new("TextLabel")
 		local LableFrame = Instance.new("Frame")
@@ -578,7 +578,7 @@ function royxui:royxstart(text,logo)
 	LogoTop.BackgroundTransparency = 1.000
 	LogoTop.Position = UDim2.new(-0.101428136, 0, -0.754071355, 0)
 	LogoTop.Size = UDim2.new(0, 50, 0, 50)
-	LogoTop.Image = "http://www.roblox.com/asset/?id="..tostring(logo)
+	LogoTop.Image = "http://www.roblox.com/asset/?id=17013181653"
 	LogoTop.ScaleType = Enum.ScaleType.Crop
 
 	local UIGradient = Instance.new("UIGradient")
@@ -692,7 +692,7 @@ function royxui:royxstart(text,logo)
 
 	function royxtabui:royxtab(text,logo)
 		if logo == nil then
-			logo = 8543527952
+			logo = 16966662126
 		end
 		PageOrders = PageOrders + 1
 
@@ -749,7 +749,7 @@ function royxui:royxstart(text,logo)
 		LogoBar.BackgroundTransparency = 1.000
 		LogoBar.Position = UDim2.new(-0.0854563117, 0, 2.21267605, 0)
 		LogoBar.Size = UDim2.new(0, 85, 0, 85)
-		LogoBar.Image = "http://www.roblox.com/asset/?id="..tostring(logo)
+		LogoBar.Image = "http://www.roblox.com/asset/?id=17013181653"
 		LogoBar.ScaleType = Enum.ScaleType.Crop
 
 		local MainPage = Instance.new("Frame")
@@ -1027,7 +1027,7 @@ function royxui:royxstart(text,logo)
 
 			function royxfunction:Toggle(text,logo,config,callback)
 				if logo == nil then
-					logo = 8543527952
+					logo = 16966662126
 				end
 				local ToggleFrame = Instance.new("Frame")
 				local ToggleMain = Instance.new("TextButton")
@@ -1081,7 +1081,7 @@ function royxui:royxstart(text,logo)
 				LogoToggle.BackgroundTransparency = 1.000
 				LogoToggle.Position = UDim2.new(0.0500000007, 0, 0.5, 0)
 				LogoToggle.Size = UDim2.new(0, 50, 0, 50)
-				LogoToggle.Image = "http://www.roblox.com/asset/?id="..tostring(logo)
+				LogoToggle.Image = "http://www.roblox.com/asset/?id=17013181653"
 
 				TextToggle.Name = "TextToggle"
 				TextToggle.Parent = LogoToggle
@@ -1258,7 +1258,7 @@ function royxui:royxstart(text,logo)
 				LockerImageLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
 				LockerImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
 				LockerImageLabel.Size = UDim2.new(0, 0, 0, 0)
-				LockerImageLabel.Image = "http://www.roblox.com/asset/?id=3926305904"
+				LockerImageLabel.Image = "http://www.roblox.com/asset/?id=17013181653"
 				LockerImageLabel.ImageRectOffset = Vector2.new(404, 364)
 				LockerImageLabel.ImageRectSize = Vector2.new(36, 36)
 				LockerImageLabel.ImageColor3 = Color3.fromRGB(255,25,25)
@@ -1918,7 +1918,7 @@ function royxui:royxstart(text,logo)
 				Addvalue.BorderSizePixel = 0
 				Addvalue.Position = UDim2.new(0.75, 0, 0.15, 0)
 				Addvalue.Size = UDim2.new(0, 15, 0, 15)
-				Addvalue.Image = "http://www.roblox.com/asset/?id=6035067836"
+				Addvalue.Image = "http://www.roblox.com/asset/?id=17013181653"
 				Addvalue.ImageColor3 =  Color3.fromRGB(85, 170, 255)
 
 				local Deletevalue = Instance.new("ImageButton")
@@ -1929,7 +1929,7 @@ function royxui:royxstart(text,logo)
 				Deletevalue.BorderSizePixel = 0
 				Deletevalue.Position = UDim2.new(0.70, 0, 0.15, 0)
 				Deletevalue.Size = UDim2.new(0, 15, 0, 15)
-				Deletevalue.Image = "http://www.roblox.com/asset/?id=6035047377"
+				Deletevalue.Image = "http://www.roblox.com/asset/?id=17013181653"
 				Deletevalue.ImageColor3 =  Color3.fromRGB(85, 170, 255)
 
 				local CustomValue = Instance.new("TextBox")
@@ -2286,7 +2286,7 @@ function royxui:royxstart(text,logo)
 				DropArbt_listimage.Position = UDim2.new(1.1, 0, 0.5, 0)
 				DropArbt_listimage.BorderSizePixel = 0
 				DropArbt_listimage.Size = UDim2.new(0, 25, 0, 25)
-				DropArbt_listimage.Image = "http://www.roblox.com/asset/?id=6031091004"
+				DropArbt_listimage.Image = "http://www.roblox.com/asset/?id=17013181653"
 				DropArbt_listimage.ImageColor3 = Color3.fromRGB(155, 155, 155)
 
 				local ScolDown = Instance.new("ScrollingFrame")

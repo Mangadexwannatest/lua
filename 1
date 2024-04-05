@@ -15,6 +15,7 @@ local Window = Fluent:CreateWindow({
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "" }),
+    Portal = Window:AddTab({ Title = "Portal", Icon = "" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
@@ -23,13 +24,12 @@ local Options = Fluent.Options
 do
 
 
-    local MultiDropdown = Tabs.Main:AddDropdown("MultiDropdown", {
+    local MultiDropdown = Tabs.Portal:AddDropdown("MultiDropdown", {
         Title = "Portals",
         Description = "Tier",
         Values = {"Common", "Uncommon", "Legendary"},
         Multi = true,
         Default = {nil},
-        Call
     })
 
     MultiDropdown:OnChanged(function(Value)
@@ -65,6 +65,8 @@ do
         end
     })
 
+    Tabs.Main:AddToggle("Toggle1", {Title = "Toggle", Default = false })
+
 
 end -- End Of Do
 
@@ -78,3 +80,9 @@ InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
 SaveManager:LoadAutoloadConfig()
+
+coroutine.resume(coroutine.create(function()
+    if Options.Toggle1.Value then
+        print("WORK KUB")
+    end
+end))

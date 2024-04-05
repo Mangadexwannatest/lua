@@ -57,6 +57,8 @@ do
         end
     end)
 
+    Tabs.Main:AddToggle("Toggle1", {Title = "Toggle", Default = false })
+
     Tabs.Main:AddButton({
         Title = "Button",
         Description = "Very important button",
@@ -64,8 +66,6 @@ do
             print(getgenv().Common,getgenv().Uncommon,getgenv().Legendary)
         end
     })
-
-    Tabs.Main:AddToggle("Toggle1", {Title = "Toggle", Default = false })
 
 
 end -- End Of Do
@@ -82,7 +82,10 @@ Window:SelectTab(1)
 SaveManager:LoadAutoloadConfig()
 
 coroutine.resume(coroutine.create(function()
-    if Options.Toggle1.Value then
-        print("WORK KUB")
+    while wait() do pcall(function ()
+        if Options.Toggle1.Value then
+            print("WORK KUB")
+          end
+       end)
     end
 end))

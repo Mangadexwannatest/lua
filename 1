@@ -3,8 +3,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Fluent " .. Fluent.Version,
-    SubTitle = "by dawid",
+    Title = "Second Piece",
+    SubTitle = "Last Update April/05/2024",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -16,76 +16,33 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "" }),
     Portal = Window:AddTab({ Title = "Portal", Icon = "" }),
-    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+    Settings = Window:AddTab({ Title = "Settings", Icon = "" })
 }
 
 local Options = Fluent.Options
+local Weaponlist = {}
 
 do
-
-
-    local MultiDropdown = Tabs.Portal:AddDropdown("MultiDropdown", {
-        Title = "Portals",
-        Description = "Tier",
-        Values = {"Common", "Uncommon", "Legendary"},
-        Multi = true,
-        Default = {nil},
-    })
-
-    MultiDropdown:OnChanged(function(Value)
-        local Values = {}
-        for Value, State in next, Value do
-            table.insert(Values, Value)
-        end
-        if table.find(Values,"Common") then
-            getgenv().Common = true
-        end
-        if table.find(Values,"Uncommon") then
-            getgenv().Uncommon = true
-        end
-        if table.find(Values,"Legendary") then
-            getgenv().Legendary = true
-        end
-        if not table.find(Values,"Common") and getgenv().Common then
-            getgenv().Common = false
-        end
-        if not table.find(Values,"Uncommon") and getgenv().Uncommon then
-            getgenv().Uncommon = false
-        end
-        if not table.find(Values,"Legendary") and getgenv().Legendary then
-            getgenv().Legendary = false
-        end
-    end)
-
-    Tabs.Main:AddToggle("Toggle1", {Title = "Toggle", Default = false })
-
-    Tabs.Main:AddButton({
-        Title = "Button",
-        Description = "Very important button",
-        Callback = function()
-            print(getgenv().Common,getgenv().Uncommon,getgenv().Legendary)
-        end
-    })
-
-
-end -- End Of Do
-
-SaveManager:SetLibrary(Fluent)
-InterfaceManager:SetLibrary(Fluent)
-SaveManager:IgnoreThemeSettings()
-SaveManager:SetIgnoreIndexes({})
-InterfaceManager:SetFolder("CrazyDay")
-SaveManager:SetFolder("CrazyDay/"..game.Players.LocalPlayer.Name)
-InterfaceManager:BuildInterfaceSection(Tabs.Settings)
-SaveManager:BuildConfigSection(Tabs.Settings)
-Window:SelectTab(1)
-SaveManager:LoadAutoloadConfig()
-
-coroutine.resume(coroutine.create(function()
-    while wait() do pcall(function ()
-        if Options.Toggle1.Value then
-            print("WORK KUB")
-          end
-       end)
+    for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+        table.insert(Weaponlist,v.Name)
     end
-end))
+
+    local Dropdown = Tabs.Main:AddDropdown("Weapon", {
+        Title = "Select Weapons",
+        Values = {Weaponlist},
+        Multi = false,
+        Default = nil,
+    })
+
+      Tabs.Main:AddButton({
+        Title = "Refresh",
+        Description = nil,
+        Callback = function()
+            Weaponlist = {}
+            for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+                table.clear(Weaponlist)
+                table.insert(Weaponlist,v.Name)
+                Options.Weapon.Values = {Weaponlist}
+             end
+        end
+    })
